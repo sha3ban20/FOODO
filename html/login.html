@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Register</title>
+    <link rel="stylesheet" href="../style/login-style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../icons/favicon.ico">
+
+</head>
+
+<body>
+    <div id="logo">
+        <div class="back"></div>
+        <div class="char">
+            <a href="../index.php">
+                <div class="f">
+                    <p>F</p>
+                </div>
+                <div class="o o1">
+                    <p>O</p>
+                </div>
+                <div class="o o2">
+                    <p>O</p>
+                </div>
+                <div class="d">
+                    <p>D</p>
+                </div>
+                <div class="o o3">
+                    <p>O</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="login-page">
+        <div class="form">
+            <form class="register-form" action="../php/register.php" method="POST">
+                <h2>Register</h2>
+                <input type="text" name="fullname" placeholder="Full Name" class="input" required />
+                <input type="text" name="username" placeholder="Username" class="input" required />
+                <input type="email" name="email" placeholder="Email"  class="input" required />
+                <input type="location" name="location" placeholder="Location"  class="input" required />
+                <input type="phone" name="phone" placeholder="Phone"  class="input" required />
+                <input type="password" name="password" placeholder="Password" class="input" required />
+                <!-- <a class="btn" href="#">
+                    Create
+                </a> -->
+                <input type="submit" value="Create" class="btn">
+                <p class="message">Already registered? <a href="#">Sign In</a></p>
+            </form>
+            <form class="login-form" action="../php/login.php" method="post">
+                <h2></i> Login</h2>
+                <input type="text" name="username" placeholder="Username" class="input" required />
+                <input type="password" name="password" placeholder="Password" class="input" required />
+                <!-- <a class="btn" href="#">
+                    Sign in
+                </a> -->
+                <input type="submit" value="Sign in" class="btn">
+                <p class="message">Not registered? <a href="#">Create an account</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../JS/login.js"></script>
+</body>
+
+</html>

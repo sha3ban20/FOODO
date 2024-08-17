@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style/reset-style.css" />
+  <title>Reset Page</title>
+</head>
+
+<body>
+  <section>
+    <header>
+      <h1>Reset Form</h1>
+    </header>
+    <div class="main">
+      <table>
+        <thead>
+          <tr>
+            <td><b>Plates</b></td>
+            <td><b>Count</b></td>
+            <td><b>Price</b></td>
+          </tr>
+        </thead>
+        <tbody id="cart-items"></tbody>
+      </table>
+      <div>
+        <h4 id="TotalPrice">Total Price: <span></span></h4>
+      </div>
+    </div>
+    <div id="frm">
+      <form action="../php/reset.php" method="post">
+        <input type="submit" id="discard" name="discard" value="Discard" class="btn">
+        <input type="submit" id="confirm" name="confirm" value="Confirm" class="btn">
+      </form>
+    </div>
+  </section>
+  <script src="../js/cart.js"></script>
+  <script>
+    fetch('../php/Order.php')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('cart-items').innerHTML = data.cart_html;
+        document.getElementById('TotalPrice').textContent = 'Total Price: $' + data.total_price;
+      });
+  </script>
+</body>
+
+</html>

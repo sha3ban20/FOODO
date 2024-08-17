@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order-Now</title>
+    <link rel="stylesheet" href="../style/order-style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../icons/favicon.ico">
+    <script src="../js/order.js" defer></script>
+</head>
+
+<body>
+    <div id="logo">
+        <div class="char">
+            <a href="../index.php">
+                <div class="f">
+                    <p>F</p>
+                </div>
+                <div class="o o1">
+                    <p>O</p>
+                </div>
+                <div class="o o2">
+                    <p>O</p>
+                </div>
+                <div class="d">
+                    <p>D</p>
+                </div>
+                <div class="o o3">
+                    <p>O</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="order-container">
+        <h1>Fast Delivery <img src="../icons/del2.png" alt="delivery" class="deli dol"></h1>
+        <div class="item-list">
+            <h2>Menu</h2>
+            <ul>
+                <!-- Menu items will be populated by JavaScript -->
+            </ul>
+        </div>
+        <h2>Order Now</h2>
+        <div class="order-form">
+            <form method="post" action="../php/addToCart.php" id="select">
+                <label for="item">Select Item:</label>
+                <select id="item" name="item">
+                    <!-- Options will be populated by JavaScript -->
+                </select>
+                <br>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                <br>
+                <div class="smt">
+                    <input type="submit" value="Add to cart" name="add_to_cart" class="blc">
+                </div>
+                <div class="delivery">
+                    <img src="../icons/del4.png" alt="delivery" class="deli">
+                    <img src="../icons/del1.png" alt="delivery" class="deli">
+                    <img src="../icons/del4.png" alt="delivery" class="deli">
+                    <img src="../icons/del2.png" alt="delivery" class="deli">
+                    <img src="../icons/del4.png" alt="delivery" class="deli">
+                </div>
+            </form>
+            <h1>My order</h1>
+            <div class="my_cart">
+                <form action="./reset.php" method="post" class="pado">
+                    <ul>
+                        <!-- Cart items will be populated by JavaScript -->
+                    </ul>
+                    <h3 class="float price-float">Total price : <span>0 $</span></h3>
+                    <input type="submit" value="submit order" class="float btn-float blc" name="submit_order">
+                    <span class="float labal">
+                        <label for="item">Select Item:</label>
+                        <select id="item" name="item">
+                            <!-- Options will be populated by JavaScript -->
+                        </select>
+                    </span>
+                    <input type="submit" value="delete item" class="float del-float rd" name="delete_item">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
