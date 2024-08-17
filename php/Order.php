@@ -1,5 +1,5 @@
 <?php
-// Assuming $my_cart is defined somewhere
+// Assuming $my_cart is defined somewhere.
 $total_price = 0;
 $cart_html = '';
 
