@@ -29,7 +29,7 @@ if (isset($_POST['add_to_cart'])) {
     echo "submited";
 }
 
-// Close the database connection
+// Close the database connection.
 // $conn->close();
 
 ?>
